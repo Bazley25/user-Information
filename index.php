@@ -9,7 +9,7 @@ curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 $result=curl_exec($ch);
 $result=json_decode($result);
 
-print_r($result);
+
 
   echo "Continent Name:" ." " .$result->continent_name.'<br>'.'<br>';
   echo "Country Name:" ." " .$result->country_name.'<br>'.'<br>';
