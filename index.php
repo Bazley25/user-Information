@@ -1,7 +1,7 @@
 <?php
 include('UserInformation.php');
 
-$ip="123.253.65.153";
+$ip="202.4.126.210";
 $ch =curl_init();
 curl_setopt($ch,CURLOPT_URL,"https://api.ipgeolocation.io/ipgeo?apiKey=c3fcb409ce824e28b5cb5fa0b27134c0&ip=".$ip);
 
@@ -48,7 +48,7 @@ $result=json_decode($result);
                   </tr>
                   <tr>
                   <td>Time:</td>
-                  <td><?php echo  isset($result->time_zone->current_time) ? date('h:i A, d-m-Y',strtotime($result->time_zone->current_time)) :"";?></td>
+                  <td><?php echo  isset($result->time_zone->current_time) ? date('h:i A, d-M-Y',strtotime($result->time_zone->current_time)) :"";?></td>
                   </tr>
                   <tr>
                   <td>IP Address:</td>
